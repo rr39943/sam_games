@@ -9,7 +9,7 @@ module.exports = {
         },
         output: {
             filename: 'game.js',
-            path: path.resolve(__dirname, '../sam_games/samvrombinator/static/samvrombinator/js')
+            path: path.resolve(__dirname, '../static/samvrombinator/js')
         },
         module: {
             rules: [{
