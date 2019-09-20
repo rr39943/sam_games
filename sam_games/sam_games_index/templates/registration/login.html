@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% if form.errors %}
+<p>Le nom d'utilisateur et le mot de passe ne correspondent. Essayez à nouveau ou catactez l'administrateur.</p>
+{% endif %}
+<h1>Connexion</h1>
+<form method="post" action="{% url 'login' %}">
+{% csrf_token %}
+<table>
+<tr>
+    <td>Nom d'utilisateur&nbsp;:&nbsp;</td>
+    <td>{{ form.username }}</td>
+</tr>
+<tr>
+    <td>Mot de passe&nbsp;:&nbsp;</td>
+    <td>{{ form.password }}</td>
+</tr>
+</table>
+
+<input type="submit" value="Connexion">
+<input type="hidden" name="next" value="{{ next }}">
+</form>
+
+{% endblock %}

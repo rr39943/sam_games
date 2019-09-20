@@ -21,3 +21,4 @@ venv.bak/
 
 # Pycharm config files
 .idea/**
+node_modules

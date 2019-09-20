@@ -1,0 +1,26 @@
+<!doctype html>
+{% load static %}
+<html lang="fr">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static "sam_games_index/css/bootstrap.css" %}" />
+    <link rel="stylesheet" href="{% static "sam_games_index/css/style.css" %}" />
+    <link href="https://fonts.googleapis.com/css?family=Caveat+Brush&display=swap" rel="stylesheet">
+
+    <title>Sam games</title>
+  </head>
+  <body>
+    <main>
+      {% block content %}
+      {% endblock %}
+    </main>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static "sam_games_index/js/jquery-3.4.1.js" %}"></script>
+  </body>
+</html>

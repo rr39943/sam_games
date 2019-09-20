@@ -1,0 +1,58 @@
+{% extends 'samvrombinator/base.html' %}
+{% block content %}
+<div class="bg-light">
+              <div id="top-menu">
+                <a href="{%url "sam_games_index:game_index" %}" >Accueil des jeux</a><br />
+                <a href="{%url "samvrombinator:options" %}" >Options</a><br />
+            </div>
+            <div class="jumbotron">
+
+                <h1>Sam Vrombinator</h1>
+                <p>Gestion des vocabulaires</p>
+            </div>
+        <div class="container">
+
+                {% if msg %}<div class="row"><div class="alert alert-info">{{ msg }}</div></div>{% endif %}
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <form class="form-group" action="{% url "samvrombinator:manage" %}" method="post" name="CreateVocForm">
+                        {% csrf_token %}
+                        <div  class="row mt-3">
+                                {{ form.voc_name.errors }}
+                        </div>
+                        <div class="row">
+                                <label for="{{ form.voc_name.id_for_label }}">Nom du vocabulaire:</label>
+                            </div>
+                    <div class="row">
+                                {{ form.voc_name }}
+                        </div>
+                    <div class="row mt-3">
+                        {{ form.words.errors }}
+                    </div>
+<div class="row">
+                        <label for="{{ form.words.id_for_label }}">Liste de mots:</label>
+                    </div>
+                    <div class="row">
+                                {{ form.words }}
+                        </div>
+
+                        <div class="row mt-2">
+                            <a href="./manage" class="btn btn-primary mr-1 mb-1">Nouveau</a>
+                            <input class="btn btn-success mr-1 mb-1" type="submit" value="Enregistrer" name="Enregistrer">
+                            <input class="btn btn-danger mr-1 mb-1" type="submit" value="Supprimer" name="Supprimer">
+                        </div>
+                    </form>
+                </div>
+                <div class="col-sm-4">
+                    <h3>Vocabulaires existants</h3>
+                    <ul class="list-group">
+                    {% for voc_name in voc_names %}
+                    <li class="list-group-item"><a href="./manage?voc_name={{voc_name|urlencode}}">{{voc_name}}</a></li>
+                    {% endfor %}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'sam_games_index/base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container-fluid min-vh-100">
+      <div class="jumbotron">
+        <h1 class="text-center">Les petits jeux de Sam</h1>
+      </div>
+      <div class="row">
+        <div class="col-md">
+
+            <div class="card mx-auto" style="width: 18rem;">
+              <img src="{% static "sam_games_index/img/SamVrombinator.png" %}" class="card-img-top" alt="Sam Vrombinator">
+              <div class="card-body">
+                <h5 class="card-title">Sam Vrombinator</h5>
+                <p class="card-text">Jeu similaire au pendu pour bien apprendre son vocabulaire.</p>
+                <a href="{% url 'samvrombinator:game' %}" class="btn btn-primary">Jouer</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
