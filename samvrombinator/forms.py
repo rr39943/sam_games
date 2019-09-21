@@ -7,7 +7,7 @@ class CreateVocForm(forms.Form):
     words = forms.CharField(label='Vocabulaire', widget=forms.Textarea(attrs={'class': 'form-control'}), required=False)
 
 class SettingsVocForm(forms.Form):
-    CHOICES = [(voc, voc) for voc in Vocabularies.get_vocs_list()]
+    CHOICES =  [(voc, voc) for voc in Vocabularies.get_vocs_list()]
     voc_selected = forms.ChoiceField(label='Vocabulaire choisi',
                                      choices=CHOICES,
                                      widget=forms.Select(attrs={'class':'form-control'}))
