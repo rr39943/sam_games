@@ -30,7 +30,7 @@ SECRET_KEY = 'jl9tku6%z32&pv&r+eg9+318z@1rs$e0n&zpd!#zfst0xmq3@j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sam-gamificator.herokuapp.com']
 
 # Application definition
 
