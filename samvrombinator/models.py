@@ -9,7 +9,7 @@ class Vocabularies(models.Model):
     def get_vocs_list(cls):
         try:
             return [voc.voc_name for voc in cls.objects.all()]
-        except utils.OperationalError:
+        except:
             return []
 
     @classmethod
