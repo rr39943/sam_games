@@ -4,7 +4,10 @@ from .models import Vocabularies
 
 class CreateVocForm(forms.Form):
     voc_name = forms.CharField(label='Titre', max_length=20, widget=forms.TextInput(attrs={'class': 'form-control'}))
-    words = forms.CharField(label='Vocabulaire', widget=forms.Textarea(attrs={'class': 'form-control'}), required=False)
+    words = forms.CharField(label='Vocabulaire',
+                            widget=forms.Textarea(attrs={'class': 'form-control'}),
+                            required=False)
+
 
 class SettingsVocForm(forms.Form):
     CHOICES = [(voc, voc) for voc in Vocabularies.get_vocs_list()]
