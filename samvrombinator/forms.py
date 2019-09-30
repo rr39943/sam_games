@@ -10,9 +10,9 @@ class CreateVocForm(forms.Form):
 
 
 class SettingsVocForm(forms.Form):
-    CHOICES = [(voc, voc) for voc in Vocabularies.get_vocs_list()]
+    
     voc_selected = forms.ChoiceField(label='Vocabulaire choisi',
-                                     choices=CHOICES,
+                                     choices=[(voc, voc) for voc in Vocabularies().get_vocs_list()],
                                      widget=forms.Select(attrs={'class':'form-control'}))
     nb_errors = forms.IntegerField(label='Nombre d\'erreurs permises avant de perdre',
                                    widget=forms.TextInput(attrs={"class": "slider",
