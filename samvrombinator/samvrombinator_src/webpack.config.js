@@ -8,7 +8,7 @@ module.exports = {
                     './src/style.less']
         },
         output: {
-            filename: 'game.js',
+            filename: 'bundle.js',
             path: path.resolve(__dirname, '../static/samvrombinator/js')
         },
         module: {
