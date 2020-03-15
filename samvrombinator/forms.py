@@ -10,19 +10,22 @@ class CreateVocForm(forms.Form):
 
 
 class SettingsVocForm(forms.Form):
-    
-    voc_selected = forms.ChoiceField(label='Vocabulaire choisi',
-                                     choices=[(voc, voc) for voc in Vocabularies().get_vocs_list()],
-                                     widget=forms.Select(attrs={'class':'form-control'}))
     nb_errors = forms.IntegerField(label='Nombre d\'erreurs permises avant de perdre',
                                    widget=forms.TextInput(attrs={"class": "slider",
                                                                  "type": "range",
                                                                  "min": "0",
                                                                  "max": "12",
-                                                                 "value": "4"}))
+                                                                 "value": "5"}))
     nb_words = forms.IntegerField(label='Nombre maximum de mots à trouver',
                                   widget=forms.TextInput(attrs={"class": "slider",
                                                                 "type": "range",
                                                                 "min": "1",
                                                                 "max": "30",
                                                                 "value": "10"}))
+
+    def __init__(self, *args, **kwargs):
+        super(SettingsVocForm, self).__init__(*args, **kwargs)
+
+        self.fields['voc_selected'] = forms.ChoiceField(label='Vocabulaire choisi',
+                                         choices=[(voc, voc) for voc in Vocabularies.get_vocs_list()],
+                                         widget=forms.Select(attrs={'class':'form-control'}))
