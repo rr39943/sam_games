@@ -1,0 +1,69 @@
+div.jumbotron{
+    color: #f9b200;
+    background-color: #042648;
+}
+body{
+    background-color: #11a0ff !important;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 5px;
+  background: #042648;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #2ba0ff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #2ba0ff;
+  cursor: pointer;
+}
+
+.tooltip_slider{
+  width: 27px;
+  line-height: 26px;
+  vertical-align: middle;
+  position: absolute;
+  z-index: 1000;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  pointer-events: none;
+  font-size: 11.5px;
+}
+
+.slider-container{
+    width: 600px;
+    position: relative;
+}
+
+#SettingsForm{
+    border-radius: 10px;
+    border: 2px #2ba0ff solid;
+    padding: 10px 15px;
+    text-align: center;
+    background-color: #fff;
+}
+
+#top-menu{
+    text-align: right;
+    float: right;
+    margin-right: 10px;
+}

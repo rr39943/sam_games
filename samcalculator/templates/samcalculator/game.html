@@ -10,7 +10,14 @@
     <script src="{% static "samcalculator/main.js" %}"></script>
 </head>
 <body>
-<div id="container"></div>
-<script src="{% static "samcalculator/main.js" %}"></script>
+    <div id="menu">
+        <ul>
+            <li><a href="{{ request.get_full_path }}" >Recommencer</a></li>
+            <li><a href="{%url "samcalculator:options" %}">Options</a></li>
+            <li><a href="{%url "sam_games_index:game_index" %}" >Menu principal</a></li>
+        </ul>
+    </div>
+    <div id="container"></div>
+    <script src="{% static "samcalculator/main.js" %}"></script>
 </body>
 </html>
