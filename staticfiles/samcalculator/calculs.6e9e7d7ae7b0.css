@@ -9,13 +9,13 @@
 
 @font-face {
   font-family: "LCD";
-  src: url('digital-7.mono.ttf')  format('truetype');
+  src: url("digital-7.mono.58045dabdc3a.ttf")  format('truetype');
 }
 
 body {
   font-family: "LCD", sans;
   font-size: 32px;
-  background-image: url("./img/texture_bois.png")
+  background-image: url("./img/texture_bois.75ecc986732c.png")
 }
 
 #timer{
@@ -58,7 +58,7 @@ input.response{
   position: relative;
   width: 1200px;
   height: 800px;
-  /* background-image: url('img/bombe_boite.png'); */
+  /* background-image: url("img/bombe_boite.8e092cd15168.png"); */
   /* background-repeat: no-repeat; */
   margin-top: 40px;
   margin-left: auto;
@@ -108,7 +108,7 @@ input.response{
 }
 #console{
   width: 740px;
-  background-image: url('./img/texture.png');
+  background-image: url("./img/texture.b525b48defc5.png");
   border-radius: 20px;
   margin-top: 70px;
   margin-left: 50px;
