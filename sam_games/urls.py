@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('', include('sam_games_index.urls')),
-    path('sam_vrombinator/', include('samvrombinator.urls', namespace='samvrombinator'))
+    path('sam_vrombinator/', include('samvrombinator.urls', namespace='samvrombinator')),
+    path('sam_calculator/', include('samcalculator.urls', namespace='samcalculator'))
 ]

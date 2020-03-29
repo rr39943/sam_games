@@ -1,0 +1,171 @@
+.calcul{
+  line-height: 46px;
+  background-color: black;
+  padding-bottom: 8px;border: solid 2px #1e1e1e;
+  margin-right: 10px;
+  width: 180px;
+  text-align: right;
+}
+
+@font-face {
+  font-family: "LCD";
+  src: url('digital-7.mono.ttf')  format('truetype');
+}
+
+body {
+  font-family: "LCD", sans;
+  font-size: 32px;
+  background-image: url("./img/texture_bois.png")
+}
+
+#timer{
+  font-size: 160px;
+  position: relative;
+  height: 180px;
+}
+
+#timer div{
+  position: absolute;
+  padding: 8px 14px 20px 14px;
+  border-width: 5px;
+  border-color: silver;
+  border-radius: 4px;
+  border-style: solid;
+}
+
+#timer div:first-child{
+  color: #202020;
+  background-color: black;
+}
+
+#timer div:last-child{
+  color: red;
+}
+
+input.response{
+  border-width: 3px;
+  border-color: silver;
+  border-radius: 3px;
+  border-style: solid;
+  color: red;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: black;
+  padding: 0 6px 10px;
+}
+#jeu{
+  position: relative;
+  width: 1200px;
+  height: 800px;
+  /* background-image: url('img/bombe_boite.png'); */
+  /* background-repeat: no-repeat; */
+  margin-top: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+}
+#bombe_boite{
+  position: absolute;
+  z-index: 1;
+}
+#explosion{
+  position: absolute;
+}
+#couvercle{
+  width: 1200px;
+  height: 800px;
+  position: absolute;
+  z-index: 3;
+  transition-duration: 1.5s;
+}
+#couvercle.open{
+  transform: translate(-1500px) rotate(20deg);
+}
+#couvercle>div{
+    background-color: white;
+    top: 330px;
+    left: 530px;
+    padding: 15px;
+    border-radius: 20px;
+    border: solid 1px #030303;
+    position: absolute;
+    text-align: center;
+}
+#couvercle  p{
+  margin: 10px;
+}
+#couvercle input{
+  background-color: #b30000;
+  color: white;
+  font-size: 30px;
+}
+.nodisplay{
+  display: none;
+}
+#container{
+
+}
+#console{
+  width: 740px;
+  background-image: url('./img/texture.png');
+  border-radius: 20px;
+  margin-top: 70px;
+  margin-left: 50px;
+  display: inherit;
+  z-index: 2;
+  position: absolute;
+}
+#timer-container{
+  margin-top: 40px;
+  display: inherit;
+}
+#timer{
+  width: 445px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.col{
+  display: inline-block;
+  color: red;
+}
+
+.col>div>div{
+  width: 350px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.col>div{
+  margin-top: 20px;
+}
+
+#redButton{
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px
+}
+
+#redButton input{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #b30000;
+  pointer: cursor;
+}
+
+.ampoule{
+  width:20px;
+  height: 20px;
+  border-radius: 10px;
+}
+.green{
+  background-color: lime;
+}
+.grey{
+  background-color: grey;
+}
+.red{
+  background-color: red;
+}
