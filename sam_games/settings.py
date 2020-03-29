@@ -28,7 +28,7 @@ if os.path.isfile(dotenv_file):
 SECRET_KEY = os.getenv('SECRET_KEY') if os.getenv('SECRET_KEY') else 'abcdefghij'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False if os.getenv('SECRET_KEY') else True
+DEBUG = True if os.getenv('SECRET_KEY') else True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost', '127.0.0.1', 'sam-gamificator.herokuapp.com']
 
