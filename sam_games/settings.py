@@ -132,4 +132,6 @@ STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 django_heroku.settings(locals())
-del DATABASES['default']['OPTIONS']['sslmode']
+
+if os.path.isfile(dotenv_file):
+    del DATABASES['default']['OPTIONS']['sslmode']
